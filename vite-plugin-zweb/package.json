@@ -1,0 +1,12 @@
+{
+  "name": "vite-plugin-zweb",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "index.js",
+  "dependencies": {
+    "@vue/compiler-sfc": "^3.4.0"
+  },
+  "peerDependencies": {
+    "vite": "^5.0.0"
+  }
+}

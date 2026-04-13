@@ -1,0 +1,35 @@
+{
+  "name": "create-ztweb",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Scaffold a new ztweb (Vue + Vite) project with .zweb file support",
+  "keywords": [
+    "ztweb",
+    "vue",
+    "vite",
+    "scaffold",
+    "cli",
+    "zweb"
+  ],
+  "license": "MIT",
+  "bin": {
+    "create-ztweb": "bin/create-ztweb.js"
+  },
+  "files": [
+    "bin",
+    "src",
+    "template",
+    "vite-plugin-zweb"
+  ],
+  "dependencies": {
+    "prompts": "^2.4.2",
+    "kolorist": "^1.8.0",
+    "fs-extra": "^11.2.0",
+    "minimist": "^1.2.8",
+    "handlebars": "^4.7.8"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/techzt13/ztweb.git"
+  }
+}
