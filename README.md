@@ -1,26 +1,26 @@
-# create-ztweb
+# zt-web
 
 Scaffold a new **ztweb** project — a Vue 3 + Vite framework using `.zweb` file extensions.
 
 ## What is ztweb?
 
-**ztweb** is a Vue 3 + Vite scaffolding tool that uses `.zweb` Single File Components instead of `.vue` files. `.zweb` files have the exact same syntax as Vue SFCs (`<template>`, `<script setup>`, `<style>` blocks), but use a custom file extension and are compiled by the included `vite-plugin-zweb` plugin.
+**ztweb** is a Vue 3 + Vite scaffolding tool that uses `.zweb` Single File Components instead of `.vue` files. `.zweb` files have the exact same syntax as Vue SFCs (`<template>`, `<script setup>`, `<style>` blocks), but use the `.zweb` extension.
 
 ## Usage
 
+This CLI is published under the `zackt` organization scope, so the recommended command is:
+
 ```bash
-# Using npm
-npm create ztweb@latest
-
-# Or specify a project name directly
-npm create ztweb@latest my-app
-
-# Using pnpm
-pnpm create ztweb
-
-# Using yarn
-yarn create ztweb
+npx @zackt/create-ztweb@latest
 ```
+
+Or specify a project name directly:
+
+```bash
+npx @zackt/create-ztweb@latest my-app
+```
+
+> Note: Because this package is scoped (`@zackt/create-ztweb`), the shorthand `npm create ztweb@latest` is not used here.
 
 Then follow the prompts!
 
@@ -110,10 +110,11 @@ cd ztweb
 # Install dependencies
 npm install
 
-# Link it globally for testing
-npm link
+# Test the published package (recommended)
+npx @zackt/create-ztweb@latest my-test-app
 
-# Test scaffolding
+# Or test locally via npm link (if you want to iterate on the CLI)
+npm link
 create-ztweb my-test-app
 
 # Test the scaffolded app
