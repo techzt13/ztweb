@@ -1,5 +1,5 @@
 {
-  "name": "create-ztweb",
+  "name": "@zackt/create-ztweb",
   "version": "1.0.0",
   "type": "module",
   "description": "Scaffold a new ztweb (Vue + Vite) project with .zweb file support",
@@ -22,11 +22,11 @@
     "vite-plugin-zweb"
   ],
   "dependencies": {
-    "prompts": "^2.4.2",
-    "kolorist": "^1.8.0",
     "fs-extra": "^11.2.0",
+    "handlebars": "^4.7.8",
+    "kolorist": "^1.8.0",
     "minimist": "^1.2.8",
-    "handlebars": "^4.7.8"
+    "prompts": "^2.4.2"
   },
   "repository": {
     "type": "git",
