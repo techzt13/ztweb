@@ -210,7 +210,7 @@ async function init() {
   if (useRouter) {
     fs.ensureDirSync(path.join(targetDir, 'src', 'router'))
     fs.ensureDirSync(path.join(targetDir, 'src', 'views'))
-    fs.writeFileSync(path.join(targetDir, 'src', 'router', `index.${ext}`), routerIndexContent(ext))
+    fs.writeFileSync(path.join(targetDir, 'src', 'router', `index.${ext}`), routerIndexContent())
     fs.writeFileSync(path.join(targetDir, 'src', 'views', 'HomeView.zweb'), homeViewContent())
     fs.writeFileSync(path.join(targetDir, 'src', 'views', 'AboutView.zweb'), aboutViewContent())
   }

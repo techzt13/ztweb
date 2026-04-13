@@ -5,10 +5,14 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    {{#if useTypeScript}}"build": "vue-tsc && vite build",{{else}}"build": "vite build",{{/if}}
+    {{#if useTypeScript}}
+    "build": "vue-tsc && vite build",
+    {{else}}
+    "build": "vite build",
+    {{/if}}
     "preview": "vite preview"{{#if useVitest}},
     "test": "vitest"{{/if}}{{#if useE2e}},
-    {{#if (eq useE2e "cypress")}}"test:e2e": "cypress open"{{/if}}{{#if (eq useE2e "playwright")}}"test:e2e": "playwright test"{{/if}}{{#if (eq useE2e "nightwatch")}}"test:e2e": "nightwatch"{{/if}}{{/if}}{{#if useEslint}},
+    {{#if (eq useE2e "cypress")}}"test:e2e": "cypress open"{{else if (eq useE2e "playwright")}}"test:e2e": "playwright test"{{else if (eq useE2e "nightwatch")}}"test:e2e": "nightwatch"{{/if}}{{/if}}{{#if useEslint}},
     "lint": "eslint ."{{/if}}{{#if usePrettier}},
     "format": "prettier --write ."{{/if}}
   },
@@ -27,8 +31,8 @@
     "vitest": "^1.5.0",
     "@vue/test-utils": "^2.4.0",
     "jsdom": "^24.0.0"{{/if}}{{#if (eq useE2e "cypress")}},
-    "cypress": "^13.0.0"{{/if}}{{#if (eq useE2e "playwright")}},
-    "@playwright/test": "^1.44.0"{{/if}}{{#if (eq useE2e "nightwatch")}},
+    "cypress": "^13.0.0"{{else if (eq useE2e "playwright")}},
+    "@playwright/test": "^1.44.0"{{else if (eq useE2e "nightwatch")}},
     "nightwatch": "^3.5.0"{{/if}}{{#if useEslint}},
     "eslint": "^9.0.0",
     "eslint-plugin-vue": "^9.25.0",
